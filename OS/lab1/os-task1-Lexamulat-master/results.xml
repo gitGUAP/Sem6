@@ -1,0 +1,252 @@
+<dnslog>
+<row>
+	<timestamp>1451069981.645868</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>60729</client_port>
+</row>
+<row>
+	<timestamp>1451069981.137574</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>36899</client_port>
+</row>
+<row>
+	<timestamp>1451069982.186023</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>51003</client_port>
+</row>
+<row>
+	<timestamp>1451069982.846159</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>39391</client_port>
+</row>
+<row>
+	<timestamp>1451069982.105848</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>43528</client_port>
+</row>
+<row>
+	<timestamp>1451069983.185923</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>52378</client_port>
+</row>
+<row>
+	<timestamp>1451069983.978269</timestamp>
+	<client_ip>10.115.34.104</client_ip>
+	<client_port>11531</client_port>
+</row>
+<row>
+	<timestamp>1451069982.371766</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>39186</client_port>
+</row>
+<row>
+	<timestamp>1451069983.658826</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>45394</client_port>
+</row>
+<row>
+	<timestamp>1451069983.658752</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>44395</client_port>
+</row>
+<row>
+	<timestamp>1451069983.658769</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>59388</client_port>
+</row>
+<row>
+	<timestamp>1451069983.658806</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>47694</client_port>
+</row>
+<row>
+	<timestamp>1451069983.658792</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>38535</client_port>
+</row>
+<row>
+	<timestamp>1451069983.658788</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>48558</client_port>
+</row>
+<row>
+	<timestamp>1451069983.585556</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>40412</client_port>
+</row>
+<row>
+	<timestamp>1451069982.325709</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>49723</client_port>
+</row>
+<row>
+	<timestamp>1451069983.745609</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>43304</client_port>
+</row>
+<row>
+	<timestamp>1451069983.745615</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>34780</client_port>
+</row>
+<row>
+	<timestamp>1451069983.745634</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>45927</client_port>
+</row>
+<row>
+	<timestamp>1451069983.745636</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>48800</client_port>
+</row>
+<row>
+	<timestamp>1451069983.725754</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>41663</client_port>
+</row>
+<row>
+	<timestamp>1451069983.965705</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>57789</client_port>
+</row>
+<row>
+	<timestamp>1451069983.745650</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>45864</client_port>
+</row>
+<row>
+	<timestamp>1451069983.745624</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>60015</client_port>
+</row>
+<row>
+	<timestamp>1451069983.929138</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>44479</client_port>
+</row>
+<row>
+	<timestamp>1451069984.065587</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>43024</client_port>
+</row>
+<row>
+	<timestamp>1451069984.305570</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>43415</client_port>
+</row>
+<row>
+	<timestamp>1451069984.725477</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>59560</client_port>
+</row>
+<row>
+	<timestamp>1451069984.545372</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>42331</client_port>
+</row>
+<row>
+	<timestamp>1451069984.645744</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>35356</client_port>
+</row>
+<row>
+	<timestamp>1451069984.385163</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>43825</client_port>
+</row>
+<row>
+	<timestamp>1451069984.265744</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>42028</client_port>
+</row>
+<row>
+	<timestamp>1451069984.198162</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>35815</client_port>
+</row>
+<row>
+	<timestamp>1451069984.557381</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>52831</client_port>
+</row>
+<row>
+	<timestamp>1451069984.759047</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>56271</client_port>
+</row>
+<row>
+	<timestamp>1451069984.629123</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>34791</client_port>
+</row>
+<row>
+	<timestamp>1451069985.719109</timestamp>
+	<client_ip>10.108.41.138</client_ip>
+	<client_port>55385</client_port>
+</row>
+<row>
+	<timestamp>1451069985.117232</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>39404</client_port>
+</row>
+<row>
+	<timestamp>1451069985.136930</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>42079</client_port>
+</row>
+<row>
+	<timestamp>1451069985.555419</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>51550</client_port>
+</row>
+<row>
+	<timestamp>1451069984.925291</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>43851</client_port>
+</row>
+<row>
+	<timestamp>1451069985.668402</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>51021</client_port>
+</row>
+<row>
+	<timestamp>1451069985.447991</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>60960</client_port>
+</row>
+<row>
+	<timestamp>1451069985.999216</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>60244</client_port>
+</row>
+<row>
+	<timestamp>1451069985.839163</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>50360</client_port>
+</row>
+<row>
+	<timestamp>1451069984.927005</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>55089</client_port>
+</row>
+<row>
+	<timestamp>1451069985.325745</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>41811</client_port>
+</row>
+<row>
+	<timestamp>1451069985.145566</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>53118</client_port>
+</row>
+<row>
+	<timestamp>1451069986.185332</timestamp>
+	<client_ip>10.100.40.92</client_ip>
+	<client_port>42297</client_port>
+</row>
+<row>
+	<timestamp>1451069986.236769</timestamp>
+	<client_ip>10.94.112.46</client_ip>
+	<client_port>34407</client_port>
+</row>
+</dnslog>
