@@ -58,6 +58,6 @@ CREATE TABLE IF NOT EXISTS TrenerSportRelation (
 
 
 ALTER TABLE Treners Rename SuperTreners;
-ALTER TABLE SuperTreners CHANGE firstName fName varchar(100)
-ALTER TABLE SuperTreners ADD additionalColumn varchar(100)
-ALTER TABLE SuperTreners DROP COLUMN additionalColumn
+ALTER TABLE SuperTreners CHANGE firstName fName varchar(100);
+ALTER TABLE SuperTreners ADD additionalColumn varchar(100);
+ALTER TABLE SuperTreners DROP COLUMN additionalColumn;
