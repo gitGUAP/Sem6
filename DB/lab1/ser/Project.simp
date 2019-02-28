@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sim-project version="11.80" multi-file="no" uid="simpcb41adc963534c84a2fde3a3fb7c6bf1">
+<sim-project version="11.91" multi-file="no" uid="simpcb41adc963534c84a2fde3a3fb7c6bf1">
   <meta>
     <name>Project</name>
     <authors> </authors>
@@ -13,10 +13,6 @@
       </counter>
     </entity-names>
     <entity-ids>
-      <counter>
-        <item-type type-id="" type="AbstractElementGroup" />
-        <value>492</value>
-      </counter>
       <counter>
         <item-type type-id="erd-entity" type="ErdEntity" />
         <value>16</value>
@@ -37,6 +33,10 @@
         <item-type type-id="erd-relationship" type="ErdRelation" />
         <value>21</value>
       </counter>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>9</value>
+      </counter>
     </entity-ids>
     <diagrams>
       <counter>
@@ -53,6 +53,7 @@
   </counters>
   <alias-groups />
   <management uid="md-2aedce6f7a4741dd8502bf46777ccdbd" name="" task-id-sequence="0">
+    <working-schedule uid="ws-1fa12937d95444b5b8e8599e64d4ad79" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
     <persons>
       <person id="Pf346b64c47be44e0a529ee49a03b0052">
         <first-name />
@@ -62,6 +63,7 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-7ed7191d77c741bd930bba8d7cba551e" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
     </persons>
     <teams />
@@ -115,27 +117,14 @@
         </meta>
         <abstract-items>
           <item id="464a6bed3fb246a6ba30ec0b0e50bc71" cid="ENT001" type="erd-entity" name="Person" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 14:25:50">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="acdec8396d010463e8c5f9259953cd539252" cid="ELEM001" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a34488bb7d63241bbb5915f2740cd4a71434" cid="ELEM002" name="fName" type="VARCHAR" type-id="VARCHAR" type-size="100" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a7c77a62ca0e846f8ade7c83308e3320f463" cid="ELEM003" name="mNname" type="VARCHAR" type-id="VARCHAR" type-size="100" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a622843e509e74a61ae476dc95d6d6978274" cid="ELEM004" name="lName" type="VARCHAR" type-id="VARCHAR" type-size="100" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a0736692641f0480cb508b3550aae0ba5215" cid="ELEM005" name="dob" type="Date" type-id="Date" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a91c5ef572c00472a9bb8547c8c02ca56725" cid="ELEM008" name="note" type="Char" type-id="Uml.Char" type-size="" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="acdec8396d010463e8c5f9259953cd539252" cid="ELEM001" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a34488bb7d63241bbb5915f2740cd4a71434" cid="ELEM002" name="fName" type="VARCHAR" type-id="VARCHAR" type-size="100" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a7c77a62ca0e846f8ade7c83308e3320f463" cid="ELEM003" name="mNname" type="VARCHAR" type-id="VARCHAR" type-size="100" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false" />
+              <attribute uid="a622843e509e74a61ae476dc95d6d6978274" cid="ELEM004" name="lName" type="VARCHAR" type-id="VARCHAR" type-size="100" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false" />
+              <attribute uid="a0736692641f0480cb508b3550aae0ba5215" cid="ELEM005" name="dob" type="Date" type-id="Date" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a91c5ef572c00472a9bb8547c8c02ca56725" cid="ELEM008" name="note" type="Char" type-id="Uml.Char" type-size="" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
             <entity-data>
@@ -158,36 +147,23 @@
             </entity-data>
           </item>
           <item id="882f0654005a49babf8d97dc6ff33f94" cid="ENT005" type="erd-entity" name="Point" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 14:43:18">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="a13337f67c06b49749db3e50d1dcd7ce4174" cid="ELEM009" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a0e4514bdb93f4070a2473f445218d935177" cid="ELEM010" name="relationType" type="VARCHAR" type-id="VARCHAR" type-size="50" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="a13337f67c06b49749db3e50d1dcd7ce4174" cid="ELEM009" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a0e4514bdb93f4070a2473f445218d935177" cid="ELEM010" name="relationType" type="VARCHAR" type-id="VARCHAR" type-size="50" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="7b670cec7ac548eca0314969cb49744c" cid="ENT006" type="erd-entity" name="PointPerson" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 14:45:22">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="ae458bff12ca248f8b8c53a5715c72c98611" cid="ELEM011" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="acfd87e68d24a48eaa916cbbe40d40e12803" cid="ELEM012" name="personId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="ac7fadad7a44e486e83db06a69c2221d1255" cid="ELEM013" name="pointId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="ae458bff12ca248f8b8c53a5715c72c98611" cid="ELEM011" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="acfd87e68d24a48eaa916cbbe40d40e12803" cid="ELEM012" name="personId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="ac7fadad7a44e486e83db06a69c2221d1255" cid="ELEM013" name="pointId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="a4923b95b5e4441b977bad3973426898" cid="REL010" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 18:10:22" from="464a6bed3fb246a6ba30ec0b0e50bc71" to="7b670cec7ac548eca0314969cb49744c">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="acfd87e68d24a48eaa916cbbe40d40e12803" />
@@ -195,29 +171,17 @@
             </erd-relation>
           </item>
           <item id="b0824e529956465fb019257defc60b9f" cid="ENT007" type="erd-entity" name="PhoneNumber" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 14:47:02">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="ad855341ca80340fa8a25e0b912a7164e155" cid="ELEM014" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a53bd53720e9043ec9a85e01100918ebb25" cid="ELEM015" name="countryCode" type="VARCHAR" type-id="VARCHAR" type-size="5" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a1a3615169e5e480eaacc8c727d3b37dd369" cid="ELEM016" name="subCode" type="VARCHAR" type-id="VARCHAR" type-size="10" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a508001190c3d4dfaa5f10647942ed806505" cid="ELEM017" name="number" type="VARCHAR" type-id="VARCHAR" type-size="15" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a6503626eae5a4649a585404d71a49cd1527" cid="ELEM021" name="personId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="ad855341ca80340fa8a25e0b912a7164e155" cid="ELEM014" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a53bd53720e9043ec9a85e01100918ebb25" cid="ELEM015" name="countryCode" type="VARCHAR" type-id="VARCHAR" type-size="5" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false" />
+              <attribute uid="a1a3615169e5e480eaacc8c727d3b37dd369" cid="ELEM016" name="subCode" type="VARCHAR" type-id="VARCHAR" type-size="10" foreign-key="false" primary-key="false" nullable="true" description="" default-value="" auto-increment="false" />
+              <attribute uid="a508001190c3d4dfaa5f10647942ed806505" cid="ELEM017" name="number" type="VARCHAR" type-id="VARCHAR" type-size="15" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a6503626eae5a4649a585404d71a49cd1527" cid="ELEM021" name="personId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="d1b1f3457bd4450ebef96c1102c597f2" cid="REL009" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 18:08:15" from="464a6bed3fb246a6ba30ec0b0e50bc71" to="b0824e529956465fb019257defc60b9f">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="a6503626eae5a4649a585404d71a49cd1527" />
@@ -225,23 +189,15 @@
             </erd-relation>
           </item>
           <item id="c8ea7ce12be64a3a85ad43cb4af4c696" cid="ENT008" type="erd-entity" name="Email" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 18:02:48">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="a3ba142eb8cb547f9a43c5b6d22f6f8f9129" cid="ELEM018" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a8946136cb8034d6788f1e1adcc8cfb6767" cid="ELEM019" name="email" type="VARCHAR" type-id="VARCHAR" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a7a8664a9b00642f59bab881285e14076526" cid="ELEM020" name="personId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="a3ba142eb8cb547f9a43c5b6d22f6f8f9129" cid="ELEM018" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a8946136cb8034d6788f1e1adcc8cfb6767" cid="ELEM019" name="email" type="VARCHAR" type-id="VARCHAR" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a7a8664a9b00642f59bab881285e14076526" cid="ELEM020" name="personId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="0fedb6d7e8864760b9f260131c8377d5" cid="REL004" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 18:06:11" from="464a6bed3fb246a6ba30ec0b0e50bc71" to="c8ea7ce12be64a3a85ad43cb4af4c696">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="" />
@@ -249,7 +205,6 @@
             </erd-relation>
           </item>
           <item id="5c0a1a84840a41349363dec701172129" cid="REL011" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 18:10:55" from="882f0654005a49babf8d97dc6ff33f94" to="7b670cec7ac548eca0314969cb49744c">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="ac7fadad7a44e486e83db06a69c2221d1255" />
@@ -324,7 +279,7 @@
           </item>
         </layer>
       </diagram>
-      <diagram type="entity-relationship" id="pa9adce1ed92c4452b062971c40ad9111_582659090" name="DBSer" order-index="2" overview-order-index="0" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-392,128">
+      <diagram type="entity-relationship" id="pa9adce1ed92c4452b062971c40ad9111_582659090" name="DBSer" order-index="2" overview-order-index="0" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-392,204">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -341,40 +296,25 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="347132f9314c472e8b2391bb2cb613e7" cid="ENT009" type="erd-entity" name="GumMemberShip" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:22:04">
-            <style class="default" />
+          <item id="347132f9314c472e8b2391bb2cb613e7" cid="ENT009" type="erd-entity" name="GymMemberShip" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:22:04">
             <entity description="" />
             <attributes>
-              <attribute uid="af746f6beafbd43a98ac503f8f9028eac281" cid="ELEM022" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="ad4dd1dfb64a34feeb16946859339e7a8139" cid="ELEM023" name="buyDate" type="Date" type-id="Date" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="aa58d7c777c3f45dfa8c5e8c52b5d23f5619" cid="ELEM024" name="numOfTrainings" type="SmallInteger" type-id="Uml.SmallInteger" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a0bed0379d14348ca908b89793711910d930" cid="ELEM025" name="typeId" type="" type-id="" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="af746f6beafbd43a98ac503f8f9028eac281" cid="ELEM022" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="ad4dd1dfb64a34feeb16946859339e7a8139" cid="ELEM023" name="buyDate" type="Date" type-id="Date" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="aa58d7c777c3f45dfa8c5e8c52b5d23f5619" cid="ELEM024" name="numOfTrainings" type="SmallInteger" type-id="Uml.SmallInteger" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a0bed0379d14348ca908b89793711910d930" cid="ELEM025" name="typeId" type="" type-id="" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="107d10635c07495ebb500692282edee4" cid="ENT010" type="erd-entity" name="MemberShipTypes" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:23:41">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="ab0a84d1078ed480f8d7fa6256975ddc266" cid="ELEM026" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a452d22f0ecd54e399c0cad90bad48344175" cid="ELEM027" name="typeName" type="VARCHAR" type-id="VARCHAR" type-size="50" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="ab0a84d1078ed480f8d7fa6256975ddc266" cid="ELEM026" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a452d22f0ecd54e399c0cad90bad48344175" cid="ELEM027" name="typeName" type="VARCHAR" type-id="VARCHAR" type-size="50" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="9126b15b9f2a479d87945cad37dabfe9" cid="REL020" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:56:32" from="107d10635c07495ebb500692282edee4" to="347132f9314c472e8b2391bb2cb613e7">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="" />
@@ -382,42 +322,24 @@
             </erd-relation>
           </item>
           <item id="9c591baee09a478eb02b7ed328de80ba" cid="ENT011" type="erd-entity" name="SportForm" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:25:17">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="a91912a10cfb143cba996c22c59d09c8f25" cid="ELEM028" name="id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a4607d358d29f4ea088f5ff74cd8c48e5422" cid="ELEM029" name="sportFormName" type="VARCHAR" type-id="VARCHAR" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a039c977ad8ad4c11b96535831f2604bc710" cid="ELEM030" name="numOfSales" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="false" nullable="false" description="" default-value="0" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="af3be754c92174f68969a4c470f4d7c5a388" cid="ELEM034" name="sportTypeId" type="" type-id="" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="a91912a10cfb143cba996c22c59d09c8f25" cid="ELEM028" name="id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a4607d358d29f4ea088f5ff74cd8c48e5422" cid="ELEM029" name="sportFormName" type="VARCHAR" type-id="VARCHAR" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="af3be754c92174f68969a4c470f4d7c5a388" cid="ELEM034" name="sportTypeId" type="" type-id="" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="531a4d3de0f741afaef37c1cd7018376" cid="ENT012" type="erd-entity" name="FormMemberShipRelation" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:38:54">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="a07b740f9197d42dea7d3590ecf4d7626942" cid="ELEM031" name="id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a9d4d7fd7d91a484aac00a96a10f1fac0484" cid="ELEM032" name="GMSId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="aa0defe5036ff45a0a045bfec2ec0b2ec525" cid="ELEM033" name="sportFormId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="a07b740f9197d42dea7d3590ecf4d7626942" cid="ELEM031" name="id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a9d4d7fd7d91a484aac00a96a10f1fac0484" cid="ELEM032" name="GMSId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="aa0defe5036ff45a0a045bfec2ec0b2ec525" cid="ELEM033" name="sportFormId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="83cf0a7eee114c35884e8401b549df52" cid="REL013" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:42:31" from="347132f9314c472e8b2391bb2cb613e7" to="531a4d3de0f741afaef37c1cd7018376">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="" />
@@ -425,7 +347,6 @@
             </erd-relation>
           </item>
           <item id="fe1956dbc4a84acb991fea567ad9f737" cid="REL014" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:42:52" from="9c591baee09a478eb02b7ed328de80ba" to="531a4d3de0f741afaef37c1cd7018376">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="aa0defe5036ff45a0a045bfec2ec0b2ec525" />
@@ -433,20 +354,14 @@
             </erd-relation>
           </item>
           <item id="be28b7d4447c4b44be1b0782ef27c0cd" cid="ENT013" type="erd-entity" name="SportType" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:43:54">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="aa5eca40368bf4d0bb4b889d2fd365252219" cid="ELEM035" name="Id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a1964cf305d7742d59f538490fee44048389" cid="ELEM036" name="typeName" type="VARCHAR" type-id="VARCHAR" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="aa5eca40368bf4d0bb4b889d2fd365252219" cid="ELEM035" name="Id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a1964cf305d7742d59f538490fee44048389" cid="ELEM036" name="typeName" type="VARCHAR" type-id="VARCHAR" type-size="30" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="e76f19a330624f4f8428de62930afbe5" cid="REL015" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:45:27" from="be28b7d4447c4b44be1b0782ef27c0cd" to="9c591baee09a478eb02b7ed328de80ba">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="" />
@@ -454,42 +369,25 @@
             </erd-relation>
           </item>
           <item id="f9a9457ff61743b1aedb6993a706280a" cid="ENT014" type="erd-entity" name="Treners" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:46:38">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="a7d14d65af05441759c9c5b515c31e342687" cid="ELEM037" name="id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a68fe185c357b416b91359facf88c1d28228" cid="ELEM038" name="FirstName" type="VARCHAR" type-id="VARCHAR" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="af1d4ef46163d4b06a90ec7029fd2fa1b771" cid="ELEM039" name="middleName" type="VARCHAR" type-id="VARCHAR" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a21b2e08e7f58491e855f34a6c64503db811" cid="ELEM040" name="lastName" type="VARCHAR" type-id="VARCHAR" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="a7d14d65af05441759c9c5b515c31e342687" cid="ELEM037" name="id" type="" type-id="" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a68fe185c357b416b91359facf88c1d28228" cid="ELEM038" name="FirstName" type="VARCHAR" type-id="VARCHAR" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="af1d4ef46163d4b06a90ec7029fd2fa1b771" cid="ELEM039" name="middleName" type="VARCHAR" type-id="VARCHAR" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a21b2e08e7f58491e855f34a6c64503db811" cid="ELEM040" name="lastName" type="VARCHAR" type-id="VARCHAR" type-size="20" foreign-key="false" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="d65d8ca07a1f461e8177c94af93fe1ea" cid="ENT015" type="erd-entity" name="TrenerSportRelation" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:48:57">
-            <style class="default" />
             <entity description="" />
             <attributes>
-              <attribute uid="a38d86e21400c460db914cd9b9f774c60180" cid="ELEM041" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a3a593a7a98994987aae8c836edb3c208468" cid="ELEM042" name="sportFormId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
-              <attribute uid="a03de58046a744414bcc4b4abb6c0acbc316" cid="ELEM043" name="trenerId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false">
-                <style class="default" />
-              </attribute>
+              <attribute uid="a38d86e21400c460db914cd9b9f774c60180" cid="ELEM041" name="id" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="false" primary-key="true" nullable="false" description="" default-value="" auto-increment="true" />
+              <attribute uid="a3a593a7a98994987aae8c836edb3c208468" cid="ELEM042" name="sportFormId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
+              <attribute uid="a03de58046a744414bcc4b4abb6c0acbc316" cid="ELEM043" name="trenerId" type="Integer" type-id="Uml.Integer" type-size="" foreign-key="true" primary-key="false" nullable="false" description="" default-value="" auto-increment="false" />
             </attributes>
             <indexes />
           </item>
           <item id="3c0cf4e15f4247b2a9f0d1be8a8ed183" cid="REL018" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:51:26" from="9c591baee09a478eb02b7ed328de80ba" to="d65d8ca07a1f461e8177c94af93fe1ea">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="" />
@@ -497,7 +395,6 @@
             </erd-relation>
           </item>
           <item id="aeb66c1887514e09b6a8cd4d7e66e271" cid="REL019" type="erd-relationship" name="" style-class="" visibility="package" change-tracking-state="added" creator="Pf346b64c47be44e0a529ee49a03b0052" creation-date="02/17/2019 19:51:36" from="f9a9457ff61743b1aedb6993a706280a" to="d65d8ca07a1f461e8177c94af93fe1ea">
-            <style class="default" />
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
               <attribute-pairs>
                 <attribute-pair from-attribute="" to-attribute="" />

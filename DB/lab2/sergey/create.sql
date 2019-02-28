@@ -34,7 +34,6 @@ CREATE TABLE IF NOT EXISTS FormMembershipRelation (
     id INT AUTO_INCREMENT,
     GMSId INT NOT NULL,
     sportFormId INT NOT NULL,
-
     FOREIGN KEY (GMSId) REFERENCES GymMemberShip(id) ON DELETE RESTRICT ON UPDATE RESTRICT,
     FOREIGN KEY (sportFormId) REFERENCES SportForm(id) ON DELETE RESTRICT ON UPDATE RESTRICT,
     PRIMARY KEY (id)
@@ -45,7 +44,6 @@ CREATE TABLE IF NOT EXISTS Treners (
     firstName VARCHAR(20) NOT NULL,
     middleName VARCHAR(20) NOT NULL,
     lastName VARCHAR(20) NOT NULL,
-
     PRIMARY KEY (id)
 );
 
@@ -53,8 +51,13 @@ CREATE TABLE IF NOT EXISTS TrenerSportRelation (
     id INT AUTO_INCREMENT,
     sportFormId INT NOT NULL,
     trenerId INT NOT NULL,
-
     FOREIGN KEY (trenerId) REFERENCES Treners(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (sportFormId) REFERENCES SportForm(id) ON DELETE RESTRICT ON UPDATE RESTRICT,
     PRIMARY KEY (id)
 );
+
+
+ALTER TABLE Treners Rename SuperTreners;
+ALTER TABLE SuperTreners CHANGE firstName fName varchar(100)
+ALTER TABLE SuperTreners ADD additionalColumn varchar(100)
+ALTER TABLE SuperTreners DROP COLUMN additionalColumn
