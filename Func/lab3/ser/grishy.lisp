@@ -1,101 +1,69 @@
-;; 9. Нахождение центральной вершины орграфа
-;; Дан некоторый связный ориентированный граф. Необходимо найти в нём
-;; центральную вершину (наиболее равноудалённую ото всех остальных).
-;; Наиболее равноудалённая вершина может быть получена как вершина, среднее
-;; расстояние от которой до других вершин наиболее близко к среднему значению
-;; этой величины для всех вершин графа. Если таких вершин несколько, вывести
-;; их все
+;Длинна ребра между вершинами A и B
+(DEFUN Edge (LST A B) (
+COND
+((NULL LST) 99)
+((AND (= (CAAR LST) A) (= (CADAR LST) B)) (CADDAR LST))
+(T (Edge (CDR LST) A B)))
+))
 
-(defun F (Net)
- ((lambda (enum counter)
-   ((lambda (averages)
-     ((lambda (mid)
-       ((lambda (deviations)
-         (EXTRACT_MIN (apply 'min deviations) deviations enum))
-        (mapcar
-        #'(lambda (dist)
-          (abs (- dist mid)))
-         averages)))
-      (/ (apply '+ averages) counter)))
-    (mapcar
-    #'(lambda (node)
-      (/
-       (apply '+
-        (mapcar
-        #'(lambda (other)
-          (DIJKSTRA Net node other))
-         (remove node enum :test 'EQUAL)))
-       (1- counter)))
-     enum)))
-  (mapcar 'car Net)
-  (length Net)))
+;Величина эксцентриситета по номеру вершины
+(DEFUN ExByVert (LST A) (
+COND
+((NULL LST) 0)
+((= (CAAR LST) A) (CADAR LST))
+(T (ExByVert (CDR LST) A))
+))
 
-(defun EXTRACT_MIN (minimal deviations enum)
- (if deviations
-  ((lambda (test result)
-    (if test (cons (car enum) result) result))
-   (equal (car deviations) minimal)
-   (EXTRACT_MIN minimal (cdr deviations) (cdr enum)))))
+;Радиус графа - минимальный эксцентриситет
+(DEFUN GraphRad ( K N LSTEXENTR &optional(minrad 99)) (
+COND 
+((<= N K) minrad)
+(T (GraphRad (+ K 1) N LSTEXENTR (MIN minrad (ExByVert LSTEXENTR K))))
+))
 
-(defun DIJKSTRA (Net Init Term
- &optional (Tmp nil) (Fix (list (cons Init 0))))
- ((lambda (fix_label fix_value)
-   (if (equal fix_label Term) fix_value
-    (apply 
-     #'(lambda (newTmp newFix)
-      (DIJKSTRA Net Init Term newTmp newFix))
-     (TRANSFER_MIN
-      (UPDATE_Tmp Tmp Fix (cdr (assoc fix_label Net)))
-      Fix))))
-  (caar Fix)
-  (cdar Fix)))
+; Алгоритм Флойда-Уоршелла
+(DEFUN DistGraph (K N LST ) (
+COND 
+((<= N K) LST)
+(T (DistGraph (+ K 1) N (DistGraph1 0 N K LST)))
+))
+(DEFUN DistGraph1 (J N K LST ) (
+COND 
+((<= N J) LST)
+(T (DistGraph1 (+ J 1) N K (DistGraph2 0 N K J LST)))
+))
+(DEFUN DistGraph2 (I N K J LST ) (
+COND 
+((<= N I) LST)
+(T (DistGraph2 (+ I 1) N K J (CONS (LIST I J (MIN (Edge LST I J) (+ (Edge LST I K) (Edge LST K J)))) LST)))
+))
 
-(defun UPDATE_Tmp (Tmp Fix Links)
- (if Links
-  ((lambda (link_label link_value)
-    (UPDATE_Tmp
-     (if (assoc link_label Fix :test 'EQUAL) Tmp
-      ((lambda (link mark)
-        (if link
-         (subst
-          (cons link_label (min mark (cdr link)))
-          link
-          Tmp
-          :test 'EQUAL)
-         (cons (cons link_label mark) Tmp)))
-       (assoc link_label Tmp :test 'EQUAL)
-       (+ link_value (cdar Fix))))
-     Fix
-     (cdr Links)))
-   (caar Links)
-   (cdar Links))
-  Tmp))
+; Нахождение эксцентриситетов вершин
+(DEFUN MakeExentr (K N LST &optional(LSTDIST '()) ) (
+COND 
+((<= N K) LSTDIST)
+(T (MakeExentr (+ K 1) N LST (MakeExentr1 0 N K LST LSTDIST)))
+))
 
-(defun TRANSFER_MIN (Tmp Fix)
- (if Tmp
-  (if (cdr Tmp)
-   (apply
-    #'(lambda (elem newTmp newFix)
-     (if (< (cdr elem) (cdar newFix))
-      (list
-       (cons (car newFix) newTmp)
-       (cons elem (cdr newFix)))
-      (list
-       (cons elem newTmp)
-       newFix)))
-    (cons (car Tmp) (TRANSFER_MIN (cdr Tmp) Fix)))
-   (list
-    (cdr Tmp)
-    (cons (car Tmp) Fix)))
-  (list Tmp Fix)))
+(DEFUN MakeExentr1 (J N K LST LSTDIST ) (
+COND 
+((<= N J) LSTDIST)
+(T (MakeExentr1 (+ J 1) N K LST (CONS (LIST K (MAX (ExByVert LSTDIST K) (Edge LST J K))) LSTDIST)))
+))
 
+;Нахождение центров графа
+(DEFUN Centrs ( K N LSTEXENTR RAD &optional(LSTRES '())) (
+COND 
+((<= N K) LSTRES)
+((= (ExByVert LSTEXENTR K) RAD) (Centrs (+ K 1) N LSTEXENTR RAD (CONS K LSTRES)))
+(T (Centrs (+ K 1) N LSTEXENTR RAD LSTRES))
+))
 
-(setq Net
-'((1 (2 . 4)(3 . 7))
-(2 (1 . 4)(3 . 3)(6 . 1))
-(3 (1 . 7)(2 . 3)(4 . 2)(5 . 5))
-(4 (3 . 2)(5 . 1)(6 . 7))
-(5 (3 . 5)(4 . 1)(6 . 3))
-(6 (2 . 1)(4 . 7)(5 . 3))))
+;Вызов всех функций K - начальная вершина (0), N - число вершин (5), LST - список дуг типа ((начальнаявершина конечная вершина длинадуги ) (...) (...)), вершины задаются числом
+(DEFUN FindCentrs (K N LST)(
+Centrs K N (MakeExentr K N (DistGraph K N LST)) (GraphRad K N (MakeExentr K N (DistGraph K N LST)))
+))
 
-(print (F Net))
+;Рабочий пример, вершина 3 - центр графа
+(SETQ LST1 '((0 1 1) (1 2 2) (3 1 1) (2 3 2) (3 2 3) (2 4 4) (4 3 5)))
+(FindCentrs 0 5 LST1)
