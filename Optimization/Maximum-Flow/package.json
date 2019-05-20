@@ -1,0 +1,14 @@
+{
+  "name": "maximum-flow",
+  "version": "1.0.0",
+  "description": "https://github.com/prabod/Graph-Theory-Ford-Fulkerson-Maximum-Flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graph-theory-ford-fulkerson": "^1.0.0"
+  }
+}
