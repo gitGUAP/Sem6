@@ -1,0 +1,5 @@
+:- dynamic hotels/3.
+
+hotels(ytre, gdsfg, 345).
+hotels(rrr, trew, 123).
+
