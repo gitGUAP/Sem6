@@ -1,5 +1,5 @@
-:- dynamic hotels/3.
+:- dynamic quotation/3.
 
-hotels(ytre, gdsfg, 345).
-hotels(rrr, trew, 123).
+quotation(ttt, rrr, 123).
+quotation(yyy, hhh, 333).
 

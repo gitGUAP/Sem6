@@ -1,45 +1,54 @@
+
+/* Запуск программы  run.*/
 run:-
-     retractall(hotels/3),
+     retractall(quotation/3),
      consult('db.txt'),
      menu.
 
+/* Формирование меню */
 menu:-
 
       repeat,
-      write('Hotels'),nl,nl,
-      write('1. Pokazat'),nl,
-      write('2. Dobabit'),nl,
-      write('3. Udalit bron'),nl,
-      write('4. Save'),nl,
-      write('5. Exit'),nl,
-      write('Select: (1-5) '),
+      write('Price'),nl,nl,
+      write('1-Show'),nl,
+      write('2-Add'),nl,
+      write('3-Del'),nl,
+      write('4-Save'),nl,
+      write('5-Search'),nl,
+      write('6-Exit'),nl,
+      write('Your choise: (1-6) '),
       read(X),
       X<7,
       process(X),
       X=6,!.
 
-process(1):-view_hotels.
-process(2):-add_hotels,!.
-process(3):-remove_hotels,!.
-process(4):-db_save_hotels,!.
-process(5):-retractall(hotels/3),!.
+process(1):-view_quotation.
+process(2):-add_quotation,!.
+process(3):-remove_quotation,!.
+process(4):-db_save_quotation,!.
+process(5):-find_quotation,!.
+process(6):-retractall(quotation/3),!.
 
-view_hotels:-
-                hotels(Name,Volume,Price),
-                write('Imya: '), write(Name),
-                write('; Gde: '), write(Volume),
-                write('; Cena: '), write(Price),nl.
+/* Чтение файла и просмотр базы данных */
+view_quotation:-
+                quotation(Name,Where,Price),
+                write('Name: '), write(Name),nl,
+                write('Where: '), write(Where),nl,
+                write('Price: '), write(Price),nl,
+                write('-------------------------------'),nl.
 
-add_hotels:-
-        write('Add new hotels:'),nl,nl,
+/* Добавление */
+add_quotation:-
+        write('Add new person:'),nl,nl,
         repeat,
-        write('Imyz: '),
+        write('Name: '),
         read(Name),
-        write('Gde: '),
-        read(Volume),
-        write('Cena: '),
+        write('Where: '),
+        read(Where),
+        write('Price: '),
         read(Price),
-        assertz(hotels(Name,Volume,Price)).
+        assertz(quotation(Name,Where,Price)),
+        quest,!.
 
 quest:-
        write('Add more? y/n '),
@@ -50,29 +59,33 @@ answer(_):-fail.
 answer(y):-fail.
 answer(n).
 
-db_save_hotels:-
+
+db_save_quotation:-
         tell('db.txt'),
-        listing(hotels),
+        listing(quotation),
         told,
         write('File db.txt save!').
 
-remove_hotels:-
-           write('Delete hotels'),nl,nl,
+
+remove_quotation:-
+           write('Delete quotation'),nl,nl,
            write('Name: '),
            read(Name),
-           retract(hotels(Name,_,_)),
-           write('hotels delete!'),nl,nl.
+           retract(quotation(Name,_,_)),
+           write('Quotation delete!'),nl,nl.
 
-find_hotels:-
-           findall(Volume,hotels(hotels,Volume,Price),Sp),
-           min(Sp,Rezult),
-           hotels(hotels,Volume,Price),
-           Volume = Rezult,
-           write('Imya: '), write(hotels),nl,
-           write('Gde: '), write(Volume),nl,
-           write('Cena: '), write(Price),nl,
-           write('-------------------------------'),nl,
+
+find_quotation:-
+	   write('Where: '),
+	   read(SearchWhere),
+           findall(Where,quotation(Quotation,Where,Price),Sp),
+           quotation(Quotation,Where,Price),
+           Where = SearchWhere,
+           write('Name: '), write(Quotation),nl,
+           write('Where: '), write(Where),nl,
+           write('Price: '), write(Price),nl,
            fail.
+
 
 min([Head|Tail],Rezult):-
                          min(Tail,Rezult),
